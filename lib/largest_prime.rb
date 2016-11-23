@@ -9,7 +9,7 @@ define_method(:find_primes) do |upper_limit|
 
   # Determines which prime factors to store into the prime factors array
   primes_array.each() do |prime|
-    if original_num % prime === 0
+    if original_num % prime == 0
       prime_factors.push(prime)
     end
   end
@@ -23,7 +23,7 @@ define_method(:create_primes_array) do
   # Determine prime numbers here
     # Sieve of Eratosthenes, ancient algorithm used to find prime numbers
   (1..self).each do |num|
-    if num % 2 != 0 and num % 3 != 0 and num % 5 != 0 and num % 7 != 0 and num % 11 != 0
+    if num % 2 != 0 and num % 3 != 0 and num % 5 != 0 and num % 7 != 0 and num % 11 != 0 and num % 13 != 0 and num % 17 != 0
       primes_array.push(num)
     end
   end
@@ -31,5 +31,4 @@ define_method(:create_primes_array) do
 end
 
 # Answer: 6857 is the largest prime factor of 600,851,475,143
-puts 600851475143.find_primes(10000)
-puts 10000.create_primes_array()
+  # puts 600851475143.find_primes(10000)
