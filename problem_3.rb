@@ -21,9 +21,9 @@ define_method(:create_primes_array) do
   primes_array = []
 
   # Determine prime numbers here
-    # Sieve of Eratothenes, ancient algorithm used to find prime numbers
+    # Sieve of Eratosthenes, ancient algorithm used to find prime numbers
   (1..self).each do |num|
-    if num % 2 != 0 or num % 3 != 0 or num % 5 != 0
+    if num % 2 != 0 or num % 3 != 0 or num % 5 != 0 or num % 7 != 0 or num % 11 != 0
       primes_array.push(num)
     end
   end
